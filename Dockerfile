@@ -23,5 +23,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN git clone https://github.com/Strech/termin_de.git
+RUN git clone https://github.com/tenaz3/termin_de.git
 RUN cd termin_de; bundle install; gem update --system
