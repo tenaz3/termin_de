@@ -1,0 +1,20 @@
+# docker-compose up  --remove-orphans
+# Usage: termin [options]
+#     -b, --before=<date>              Trigger only on date earlier than given date
+#     -c, --execute=<command>          Run given command with %{date} and %{link} replacements
+#     -s, --service=<id>               Id of the requested service
+#     -u, --burgeramt=<id>             Id of the burgeramt
+#         --dry-run                    Run on saved examples
+#         --version                    Display the version
+version: '3'
+
+services:
+  termin:
+    image: termin_de
+    build: .
+    tty: true
+    # command: bash -c "termin_de/bin/termin_de --before 2021-05-09 --service 327537 --burgeramt 121646"
+    # command: bash -c "cd termin_de; bin/termin_de --before 2021-05-31 --service 327537"
+    # command: bash -c "cd termin_de; bin/console"
+    # command: tail -f /dev/null
+   
